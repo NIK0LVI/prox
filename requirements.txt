@@ -1,0 +1,8 @@
+mysql-connector-python
+SQLAlchemy
+sqlalchemy-utils
+fastapi[all]
+fastapi-utils
+PYMYSQL
+uvicorn
+pydantic
