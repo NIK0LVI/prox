@@ -55,8 +55,8 @@ class EmployeeController:
             employment_end: date = None
     ):
         try:
-            employee = EmployeeServices.update_employee(employee_id, last_name,first_name, education, email, address,
-                                                     compensation, employment_start, employment_end)
+            employee = EmployeeServices.update_employee(employee_id, last_name, first_name, education, email, address,
+                                                        compensation, employment_start, employment_end)
             return employee
         except Exception as e:
             raise HTTPException(status_code=400, detail=str(e))
