@@ -25,3 +25,29 @@ def create_employee(employee: EmployeeSchemaIn):
 @employee_router.get("/id", response_model=EmployeeSchema)
 def get_employee_by_id(employee_id: str):
     return EmployeeController.get_employee_by_id(employee_id)
+
+
+@employee_router.get("/get-all-employees", response_model=list[EmployeeSchema])
+def get_all_employees():
+    return EmployeeController.get_all_employees()
+
+
+@employee_router.delete("/")
+def delete_employee_by_id(employee_id: str):
+    return EmployeeController.delete_employee_by_id(employee_id)
+
+
+@employee_router.put("/update-employee-by-id", response_model=EmployeeSchema)
+def update_employee(
+        employee_id: str,
+        last_name: str = None,
+        first_name: str = None,
+        education: str = None,
+        email: str = None,
+        address: str = None,
+        compensation: float = None,
+        employment_start: date = None,
+        employment_end: date = None
+):
+    return EmployeeController.update_employee(employee_id, last_name, first_name, education, email, address,
+                                              compensation, employment_start, employment_end)
