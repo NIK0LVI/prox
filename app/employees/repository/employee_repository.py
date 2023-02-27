@@ -33,6 +33,8 @@ class EmployeeRepository:
     def get_employee_by_email(self, email: str):
         """ Raise an exception. """
         employee = self.db.query(Employee).filter(Employee.email == email).first()
+        if employee is None:
+            raise EmployeeNotFoundException(f"Employee with email {email} not found. ", 400)
         return employee
 
     def get_all_employees(self):
@@ -66,7 +68,7 @@ class EmployeeRepository:
             if employee is None:
                 raise EmployeeNotFoundException(f"Employee with employee ID {employee_id} not found. ", 400)
             if last_name is not None:
-                employee.email = last_name
+                employee.last_name = last_name
             if first_name is not None:
                 employee.first_name = first_name
             if education is not None:

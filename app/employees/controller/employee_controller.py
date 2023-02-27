@@ -28,6 +28,17 @@ class EmployeeController:
             raise HTTPException(status_code=500, detail=str(e))
 
     @staticmethod
+    def get_employee_by_email(email: str):
+        try:
+            employee = EmployeeServices.get_employee_by_email((email))
+            if employee:
+                return employee
+        except EmployeeNotFoundException as e:
+            raise HTTPException(status_code=e.code, detail=e.message)
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))
+
+    @staticmethod
     def get_all_employees():
         employee = EmployeeServices.get_all_employees()
         return employee

@@ -29,6 +29,15 @@ class EmployeeServices:
             raise e
 
     @staticmethod
+    def get_employee_by_email(email: str):
+        try:
+            with SessionLocal() as db:
+                employee_repo = EmployeeRepository(db)
+                return employee_repo.get_employee_by_email(email)
+        except Exception as e:
+            raise e
+
+    @staticmethod
     def get_all_employees():
         try:
             with SessionLocal() as db:

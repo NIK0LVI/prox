@@ -27,6 +27,11 @@ def get_employee_by_id(employee_id: str):
     return EmployeeController.get_employee_by_id(employee_id)
 
 
+@employee_router.get("/email", response_model=EmployeeSchema)
+def get_employee_by_email(email: str):
+    return EmployeeController.get_employee_by_email(email)
+
+
 @employee_router.get("/get-all-employees", response_model=list[EmployeeSchema])
 def get_all_employees():
     return EmployeeController.get_all_employees()
