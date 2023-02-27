@@ -62,7 +62,7 @@ class EmployeeServices:
         try:
             with SessionLocal() as db:
                 employee_repo = EmployeeRepository(db)
-                return employee_repo.update_employee(employee_id, last_name,first_name, education, email, address,
+                return employee_repo.update_employee(employee_id, last_name, first_name, education, email, address,
                                                      compensation, employment_start, employment_end)
 
         except Exception as e:
