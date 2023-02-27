@@ -6,12 +6,13 @@ from sqlalchemy.orm import Session
 from app.employees.exceptions import *
 from app.employees.models import Employee
 
+
 class EmployeeRepository:
     def __init__(self, db: Session):
-        self.db =db
+        self.db = db
 
     def create_employee(self, last_name, first_name, education, email, address, compensation, employment_start,
-                 employment_end):
+                        employment_end):
         try:
             employee = Employee(last_name=last_name, first_name=first_name, education=education, email=email,
                                 address=address, compensation=compensation, employment_start=employment_start,
@@ -87,6 +88,3 @@ class EmployeeRepository:
             return employee
         except Exception as e:
             raise e
-
-
-
