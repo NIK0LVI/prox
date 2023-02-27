@@ -14,12 +14,12 @@ employee_router = APIRouter(tags=["employees"], prefix="/api/employees")
 def create_employee(employee: EmployeeSchemaIn):
     return EmployeeController.create_employee(employee.last_name,
                                               employee.first_name,
+                                              employee.education,
                                               employee.email,
                                               employee.address,
-                                              employee.education,
                                               employee.compensation,
                                               employee.employment_start,
-                                              employment_end=None)
+                                              employee.employment_end)
 
 
 @employee_router.get("/id", response_model=EmployeeSchema)

@@ -30,7 +30,7 @@ class EmployeeController:
     @staticmethod
     def get_employee_by_email(email: str):
         try:
-            employee = EmployeeServices.get_employee_by_email((email))
+            employee = EmployeeServices.get_employee_by_email(email)
             if employee:
                 return employee
         except EmployeeNotFoundException as e:
