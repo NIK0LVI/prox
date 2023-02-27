@@ -1,8 +1,11 @@
 mysql-connector-python
-SQLAlchemy
+SQLAlchemy~=1.4.46
 sqlalchemy-utils
-fastapi[all]
+fastapi[all]~=0.92.0
 fastapi-utils
 PYMYSQL
-uvicorn
-pydantic
+uvicorn~=0.20.0
+pydantic~=1.10.5
+cryptography
+
+starlette~=0.25.0
