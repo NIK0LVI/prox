@@ -7,7 +7,7 @@ class OfficeServices:
     def create_office(city, phone, address, postal):
         with SessionLocal() as db:
             try:
-                office_repo = OfficeRepository
+                office_repo = OfficeRepository(db)
                 return office_repo.create_office(city=city, phone=phone, address=address, postal=postal)
             except Exception as e:
                 raise e
