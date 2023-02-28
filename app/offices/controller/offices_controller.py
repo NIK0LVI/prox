@@ -1,5 +1,4 @@
-from datetime import date
-from fastapi import HTTPException, Response
+from fastapi import HTTPException
 
 from app.offices.exceptions import OfficeNotFoundException
 from app.offices.services import OfficeServices
