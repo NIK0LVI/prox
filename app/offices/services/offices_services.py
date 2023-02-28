@@ -1,4 +1,3 @@
-from datetime import date
 from app.db.database import SessionLocal
 from app.offices.repository.offices_repository import OfficeRepository
 
