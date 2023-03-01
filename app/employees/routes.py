@@ -19,12 +19,12 @@ def create_employee(employee: EmployeeSchemaIn):
                                               employee.employment_end)
 
 
-@employee_router.get("/id", response_model=EmployeeSchema)
+@employee_router.get("/employee-id", response_model=EmployeeSchema)
 def get_employee_by_id(employee_id: str):
     return EmployeeController.get_employee_by_id(employee_id)
 
 
-@employee_router.get("/email", response_model=EmployeeSchema)
+@employee_router.get("/employee-email", response_model=EmployeeSchema)
 def get_employee_by_email(email: str):
     return EmployeeController.get_employee_by_email(email)
 
