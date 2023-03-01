@@ -91,5 +91,3 @@ class StudentRepository:
                 return student
         except Exception as e:
             raise e
-
-"""proxy"""
