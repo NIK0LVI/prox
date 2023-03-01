@@ -15,8 +15,10 @@ class Student(Base):
     city = Column(String(100))
     postal = Column(String(100))
     course_score = Column(Integer)
+    course_start = Column(Date)
+    course_end = Column(Date)
 
-    def __init__(self, last_name, first_name, phone, address, city, postal, course_score):
+    def __init__(self, last_name, first_name, phone, address, city, postal, course_score, course_start, course_end):
         self.last_name = last_name
         self.first_name = first_name
         self.phone = phone
@@ -24,3 +26,6 @@ class Student(Base):
         self.city = city
         self.postal = postal
         self.course_score = course_score
+        self.course_start = course_start
+        self.course_end = course_end
+
