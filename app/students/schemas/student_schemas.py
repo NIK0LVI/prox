@@ -8,13 +8,13 @@ class StudentSchema(BaseModel):
     student_id: UUID4
     last_name: str
     first_name: str
-    phone: str
+    phone: Optional[str]
     address: str
     city: str
     postal: str
-    course_score: int
+    course_score: Optional[int]
     course_start: date
-    course_end: date
+    course_end: Optional[date]
 
     class Config:
         orm_mode = True
@@ -23,13 +23,13 @@ class StudentSchema(BaseModel):
 class StudentSchemaIn(BaseModel):
     last_name: str
     first_name: str
-    phone: str
+    phone: Optional[str] = None
     address: str
     city: str
     postal: str
-    course_score: int
+    course_score: Optional[int] = None
     course_start: date
-    course_end: date
+    course_end: Optional[date] = None
 
     class Config:
         orm_mode = True
