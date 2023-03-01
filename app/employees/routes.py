@@ -2,7 +2,6 @@ from datetime import date
 from fastapi import APIRouter, Depends
 
 from app.employees.controller.employee_controller import EmployeeController
-
 from app.employees.schemas.employee_schema import EmployeeSchema, EmployeeSchemaIn
 
 employee_router = APIRouter(tags=["employees"], prefix="/api/employees")
