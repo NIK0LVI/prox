@@ -1,8 +1,6 @@
-import hashlib
 from datetime import date
 
 from app.db.database import SessionLocal
-
 from app.employees.repository.employee_repository import EmployeeRepository
 
 
