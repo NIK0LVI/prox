@@ -25,9 +25,10 @@ class TestStudentRepo(TestClass):
     def test_create_student(self):
         with TestingSessionLocal() as db:
             student_repo = StudentRepository(db)
-            student = student_repo.create_student("prezime", "ime", "telefon", "adresa", "grad", "postanski",
-                                                  "rezultat",
-                                                  date, date)
+            student = student_repo.create_student("prezime_1", "ime_1", "telefon_1", "adresa_1", "grad_1",
+                                                    "postanski_1",
+                                                    "rezultat_1",
+                                                    date, date)
             assert student.last_name == "prezime"
             assert student.first_name == "ime"
             assert student.phone == "telefon"
@@ -40,9 +41,10 @@ class TestStudentRepo(TestClass):
     def test_create_student_error(self):
         with TestingSessionLocal() as db:
             student_repo = StudentRepository(db)
-            student = student_repo.create_student("prezime", "ime", "telefon", "adresa", "grad", "postanski",
-                                                  "rezultat",
-                                                  date, date)
+            student = student_repo.create_student("prezime_1", "ime_1", "telefon_1", "adresa_1", "grad_1",
+                                                    "postanski_1",
+                                                    "rezultat_1",
+                                                    date, date)
             assert not student.last_name != "prezime"
             assert not student.first_name != "ime"
             assert not student.phone != "telefon"
