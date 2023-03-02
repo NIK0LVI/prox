@@ -6,6 +6,7 @@ from app.config import settings
 
 
 class EmailServices:
+    """Got blocked by Sendgrid, sus email. """
     conf = ConnectionConfig(
         MAIL_USERNAME=settings.MAIL_USERNAME,
         MAIL_PASSWORD=settings.MAIL_PASSWORD,
