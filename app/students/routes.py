@@ -60,7 +60,7 @@ def update_student(
 
 
 @student_router.put("/email-notif")
-def send_email():
-    email = EmailNotifications()
+def send_email(receiver_email):
+    email = EmailNotifications(receiver_email)
     email_yeet = email.send_money_pls()
     return email_yeet

@@ -3,12 +3,12 @@ import ssl
 
 
 class EmailNotifications:
-    def __init__(self):
+    def __init__(self, receiver_email):
         self.__port = 587
         self.__server = "smtp.gmail.com"
         self.__sender_email = "testmyapp6969@gmail.com"
         """Receiver email constant can be set to any email. """
-        self.__receiver_email = "radic.nikola993@gmail.com"
+        self.__receiver_email = receiver_email
         self.__password = "zqlfenazrooqqblf"
 
     def get_port(self):
