@@ -2,8 +2,6 @@ import pytest
 from datetime import date
 from sqlalchemy.exc import IntegrityError
 
-from app.students.exceptions import StudentNotFoundException
-from app.students.models import Student
 from app.tests import TestClass, TestingSessionLocal
 from app.students.repository import StudentRepository
 
