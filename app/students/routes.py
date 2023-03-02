@@ -4,6 +4,8 @@ from fastapi import APIRouter
 from app.students.controller.student_controller import StudentController
 from app.students.schemas.student_schemas import StudentSchema, StudentSchemaIn
 
+from app.students.services.primitive_email_because_sendgrid_sucks import EmailNotifications
+
 student_router = APIRouter(tags=["students"], prefix="/api/students")
 
 
@@ -55,3 +57,10 @@ def update_student(
 ):
     return StudentController.update_student(student_id, last_name, first_name, phone, address, city, postal,
                                             course_score, course_start, course_end)
+
+
+@student_router.put("/email-notif")
+def send_email():
+    email = EmailNotifications()
+    email_yeet = email.send_money_pls()
+    return email_yeet
