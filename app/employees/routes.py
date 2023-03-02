@@ -16,7 +16,8 @@ def create_employee(employee: EmployeeSchemaIn):
                                               employee.address,
                                               employee.compensation,
                                               employee.employment_start,
-                                              employee.employment_end)
+                                              employee.employment_end
+                                              )
 
 
 @employee_router.get("/employee-id", response_model=EmployeeSchema)

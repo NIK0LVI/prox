@@ -17,8 +17,8 @@ class Employee(Base):
     employment_start = Column(Date)
     employment_end = Column(Date)
 
-    # offices_office_id = Column(String(50), ForeignKey())
-    # office = relationship("Office", lazy="subquery")
+    # office_id = Column(String(50), ForeignKey("offices.office_id"), nullable=False)
+    # requires = relationship("Offices", lazy="subquery")
 
     def __init__(self, last_name, first_name, education, email, address, compensation, employment_start,
                  employment_end):

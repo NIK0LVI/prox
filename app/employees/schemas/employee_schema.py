@@ -8,8 +8,8 @@ class EmployeeSchema(BaseModel):
     employee_id: UUID4
     last_name: str
     first_name: str
-    education: str
-    email: str
+    education: Optional[str]
+    email: EmailStr
     office_id: Optional[str]
     address: str
     compensation: float
@@ -24,7 +24,7 @@ class EmployeeSchemaIn(BaseModel):
     last_name: str
     first_name: str
     education: Optional[str] = None
-    email: str
+    email: EmailStr
     office_id: Optional[str] = None
     address: str
     compensation: float
