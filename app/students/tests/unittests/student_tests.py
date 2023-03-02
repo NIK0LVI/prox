@@ -13,11 +13,19 @@ class TestStudentRepo(TestClass):
     def create_students_for_methods():
         with TestingSessionLocal() as db:
             student_repo = StudentRepository(db)
-            student_1 = student_repo.create_student("prezime_1", "ime_1", "telefon_1", "adresa_1", "grad_1",
+            # student_1 = student_repo.create_student("prezime_1", "ime_1", "telefon_1", "adresa_1", "grad_1",
+            #                                         "postanski_1",
+            #                                         "rezultat_1",
+            #                                         date, date)
+            # student_2 = student_repo.create_student("prezime_2", "ime_2", "telefon_2", "adresa_2", "grad_2",
+            #                                         "postanski_2",
+            #                                         "rezultat_2",
+            #                                         date, date)
+            student_repo.create_student("prezime_1", "ime_1", "telefon_1", "adresa_1", "grad_1",
                                                     "postanski_1",
                                                     "rezultat_1",
                                                     date, date)
-            student_2 = student_repo.create_student("prezime_2", "ime_2", "telefon_2", "adresa_2", "grad_2",
+            student_repo.create_student("prezime_2", "ime_2", "telefon_2", "adresa_2", "grad_2",
                                                     "postanski_2",
                                                     "rezultat_2",
                                                     date, date)
