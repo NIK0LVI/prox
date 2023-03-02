@@ -8,7 +8,8 @@ from app.students.repository import StudentRepository
 
 class TestStudentRepo(TestClass):
 
-    def create_students_for_methods(self):
+    @staticmethod
+    def create_students_for_methods():
         with TestingSessionLocal() as db:
             student_repo = StudentRepository(db)
             student_1 = student_repo.create_student("prezime_1", "ime_1", "telefon_1", "adresa_1", "grad_1",
