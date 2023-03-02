@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     DB_NAME: str
 
-    # USER_SECRET: str
+    DB_NAME_TEST: str
 
     class Config:
         env_file = "./.env"
