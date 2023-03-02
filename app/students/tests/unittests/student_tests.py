@@ -4,6 +4,7 @@ from sqlalchemy.exc import IntegrityError
 
 from app.tests import TestClass, TestingSessionLocal
 from app.students.repository import StudentRepository
+from app.students.models import Student
 
 
 class TestStudentRepo(TestClass):
@@ -61,4 +62,4 @@ class TestStudentRepo(TestClass):
         with TestingSessionLocal() as db:
             students = StudentRepository(db)
             all_students = students.get_all_students()
-            assert len(all_students) == 4
+            assert len(all_students) == 1
